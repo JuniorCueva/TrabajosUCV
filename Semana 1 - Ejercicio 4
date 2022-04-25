@@ -1,0 +1,39 @@
+package ejercicio4.semana1;
+import javax.swing.*;
+public class Ejercicio4Semana1 
+{
+
+    public static void main(String[] args) 
+    {
+        //int Asignacion;
+        double Basico, Remuneracion=0; 
+        String Cargo; 
+        
+        Basico = Double.parseDouble(JOptionPane.showInputDialog("Ingrese El sueldo Basico"));
+        Cargo = JOptionPane.showInputDialog("Ingrese"+ "\n" +"[O] para Obrero" + "\n"  + "[E] para empleado" + "\n" + "[J] para ejecutivo" ); 
+        
+        switch (Cargo)
+        {
+            case "O" : 
+            {
+                Remuneracion=Basico+100+120; 
+                break;
+            }
+            
+            case "E" :
+            {
+                Remuneracion=Basico+120+150+200; 
+                break;
+            }
+            
+            case "J" :
+            {
+                Remuneracion=Basico+250+250+500; 
+                break;
+            }
+        }
+        
+        JOptionPane.showMessageDialog(null, "Su remuneracion es: " + Remuneracion);
+    }
+    
+}
